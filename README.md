@@ -1,5 +1,6 @@
-# App de prueba de Reportes para el área del Caae
-
-## Objetivo: Compartir reportes dentro de una organización.
+# Reportes Caae
+App de prueba de reportes estadísticos para el área del Caae
+## Objetivo
+Compartir reportes dentro de una organización.
 
 @Autor: Samuel Pérez Sánchez
