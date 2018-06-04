@@ -3,6 +3,7 @@ from . import views
 from django.contrib.auth.views import login
 
 urlpatterns = [
-    url(r'^$', views.home),
-    #url(r'^logout/$', views.logout,{'next_page':'accounts:login'}),
+    url(r'^$', views.inicio),
+    url(r'^home/reports/$', views.home, name='home'),
+    url(r'^home/reports/autoreporte$', views.autoreporte, name='autoreporte'),
     ]

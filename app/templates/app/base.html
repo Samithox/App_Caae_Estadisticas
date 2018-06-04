@@ -7,17 +7,11 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
-	<header>
-		<div class="wrapper">
-				<div class="logo"> 
-					<img class="mb-4" src="{% static 'img/Logo CAAE Semi Blanco.png' %}" alt="" width="150" height="60">
-				</div>
-					<nav>
-						<a> Bienvenido {{ user.get_full_name }} (<a href="{% url 'logout' %}"></span>Logout</a>)
-						</a>
-					</nav>		
-		</div>	
-	</header>
+	
+	{% include 'app/header.html'%}
+
+	{% include 'app/title.html'%}
+
 	{% block content %}
 	{% endblock %}
 </body>

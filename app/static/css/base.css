@@ -24,6 +24,39 @@ header nav{
 	font-size: 100%;
 }
 header .logo{
-	margin-right: 0.5%;
-	float:left;
+	margin-left:  0.5%;
+	float: left;
 }
+
+
+.titulo{
+	margin-left:  5%;
+	margin-top: 3%;
+	text-align: left;
+	font-family: 'Anton', sans-serif;
+	font-size: 50pt;
+}
+
+ .ruta {
+ 	font-weight: 10%;
+	height: 1%;
+	margin-left: 8%;
+	margin-right: 86%;
+	margin-top: 2%;
+}
+
+.page-header {
+        background-color: #797878;
+        margin-top: 0;
+        padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+        color: #ffffff;
+        font-size: 400%;
+        text-decoration: none;
+    }
+
+.container{
+	margin-top: 6%;
+}    
