@@ -1,18 +1,23 @@
 {% extends 'registration/base_login.html' %}
 
 {% block content %}
-    <div>{% if form.errors %}
-        <p>Your username and password didn't match. Please try again.</p>
+    <table class="container">
+    <div class="error">{% if form.errors %}
+        <p>Tu usuario y contraseña no coinciden. Porfavor intenta de nuevo.</p>
     {% endif %}
     </div>
-
+    </table>
     <div>
-    <form method="post" action="{% url 'login' %}">
+    <form method="post" class="form-signin" action="{% url 'login' %}">
     {% csrf_token %}
-        <table>
+
+    <h2 class="h3 mb-3 font-weight-normal">Ingresa a tu cuenta</h2>
+        <table class="table-control">
         <tr>
+            
             <td>{{ form.username.label_tag }}</td>
             <td>{{ form.username }}</td>
+            </div>
         </tr>
         <tr>
             <td>{{ form.password.label_tag }}</td>
@@ -20,8 +25,10 @@
         </tr>
         </table>
 
-        <input type="submit" value="login" />
+        <input class="btn btn-primary " type="submit" value="Ingresa" /> 
         <input type="hidden" name="next" value="{{ next }}" />
+        <p class="mt-5 mb-3 text-muted">&copy; CAAE 2018</p> 
     </form>
-    </div>        
+    </div>  
+
 {% endblock %}

@@ -1,0 +1,29 @@
+html,
+body {
+  height: 100%;
+}
+
+body{
+	background-color: #BDBABA;
+}
+
+header{
+	height: 8.5%;
+	background:#252932;
+	
+}
+
+.wrapper{
+	color: #FDFBFB;
+	overflow:hidden;
+}
+header nav{
+	margin-top: 1%;
+	margin-right: 0.5%;
+	float: right;
+	font-size: 100%;
+}
+header .logo{
+	margin-right: 0.5%;
+	float:left;
+}
