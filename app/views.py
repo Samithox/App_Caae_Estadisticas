@@ -13,5 +13,17 @@ def inicio(request):
 @login_required
 def autoreporte(request):
     return render(request, 'app/autoreporte.html',{})
+
+@login_required
+def kolb(request):
+    return render(request, 'app/kolb.html',{})
+
+@login_required
+def edward(request):
+    return render(request, 'app/edward.html',{})
+
+@login_required
+def tap(request):
+    return render(request, 'app/tap.html',{})            
   
 

@@ -1,4 +1,5 @@
 {% extends 'registration/base_login.html' %}
+{% load staticfiles %}
 
 {% block content %}
     <table class="container">
@@ -10,24 +11,28 @@
     <div>
     <form method="post" class="form-signin" action="{% url 'login' %}">
     {% csrf_token %}
+        
+        <div >
+            <img align="center" class="col-ms-4" src="{% static 'img/Logo CAAE.png' %}" alt="" width="350" height="150">
+       
+        <h2 class="h3 mb-3 font-weight-normal"><a class="alert-link">Ingresa a tu cuenta</a></h2>
+            <table class="table-control">
+            <tr>
+                
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+               
+            </tr>
+            <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+            </tr>
+            </table>
 
-    <h2 class="h3 mb-3 font-weight-normal">Ingresa a tu cuenta</h2>
-        <table class="table-control">
-        <tr>
-            
-            <td>{{ form.username.label_tag }}</td>
-            <td>{{ form.username }}</td>
-            </div>
-        </tr>
-        <tr>
-            <td>{{ form.password.label_tag }}</td>
-            <td>{{ form.password }}</td>
-        </tr>
-        </table>
-
-        <input class="btn btn-primary " type="submit" value="Ingresa" /> 
-        <input type="hidden" name="next" value="{% url 'home' %}" />
-        <p class="mt-5 mb-3 text-muted">&copy; CAAE 2018</p> 
+            <input class="btn btn-primary " type="submit" value="Ingresa" /> 
+            <input type="hidden" name="next" value="{% url 'home' %}" />
+            <p class="mt-5 mb-3 text-muted">&copy; CAAE 2018</p> 
+         </div>   
     </form>
     </div>  
 

@@ -4,15 +4,20 @@
 <head>
 	<title>Estadisticas</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="icon" href="{% static 'img/RC.png' %}">
 </head>
-<body>
+	<body>
 	
-	{% include 'app/header.html'%}
-
-	{% include 'app/title.html'%}
-
-	{% block content %}
-	{% endblock %}
-</body>
+		{% include 'app/header.html'%}
+		{% include 'app/title.html'%}
+		
+		<div class="list-group">
+			
+				{% block content %}
+				{% endblock %}
+				
+		</div>
+	</body>
 </html>

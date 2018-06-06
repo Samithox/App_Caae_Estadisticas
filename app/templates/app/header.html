@@ -2,11 +2,15 @@
 <header>
 		<div class="wrapper">
 				<div class="logo"> 
-					<img class="mb-4" src="{% static 'img/Logo CAAE Semi Blanco.png' %}" alt="" width="150" height="60">
+					<a href="http://www.unach.cl/">
+					<img class="mb-4" src="{% static 'img/Logo UnACh con Letras Blanco.png' %}" alt="" width="160" height="50">
+					</a>
 				</div>
 					<nav>
-						<a> Bienvenido {{ user.get_full_name }} (<a href="{% url 'logout' %}"></span>Logout</a>)
+						<a> Bienvenido <i class="fas fa-user"></i> {{ user.get_full_name }} 
+							<a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Salir</a>
 						</a>
 					</nav>		
 		</div>	
 	</header>
+	
