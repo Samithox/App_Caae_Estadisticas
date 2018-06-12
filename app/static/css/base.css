@@ -36,7 +36,7 @@ header .logo{
 	font-size: 50pt;
 }
 
- .ruta {
+.ruta {
  	font-weight: 10%;
 	height: 1%;
 	margin-left: 5%;
@@ -84,10 +84,5 @@ header .logo{
 	margin-left: 30%;
 	margin-right:10%;
 	background-color:  #CBCACA;
-	display: none;
-}
-
-.box #lista2 ul { 
-    list-style:none; 
 }
 
