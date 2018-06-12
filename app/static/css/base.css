@@ -84,4 +84,10 @@ header .logo{
 	margin-left: 30%;
 	margin-right:10%;
 	background-color:  #CBCACA;
+	display: none;
 }
+
+.box #lista2 ul { 
+    list-style:none; 
+}
+

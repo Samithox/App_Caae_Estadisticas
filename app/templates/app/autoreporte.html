@@ -1,5 +1,5 @@
 {% extends 'app/base.html' %}
-
+{% load staticfiles %}
 {% block content %}
 	
 	<nav class="ruta" aria-label="breadcrumb">
@@ -8,8 +8,41 @@
 		    <li class="breadcrumb-item active" aria-current="page">Autoreporte</li>
 	 	 </ol>
 	</nav>
+	<div class="container">
+		<h4><i class="fas fa-angle-double-right"></i> Tenemos los siguientes reportes:</h4>		
+	</div>
+	<section class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12">
+				<div class="box">
+					<div  class="list-group">
+						<ul id="lista2" class="list-group-item">
+							<a class="hola" href="#hola">
+								<h3><i class="fas fa-angle-right"></i> Universidad</h3>
+							</a>
+						</ul>
+						<ul id="lista2" class="list-group-item">
+							<a class="hola" href="#">
+								<h3><i class="fas fa-angle-right"></i> Facultad</h3>
+							</a>
+						</ul>
+						<ul id="lista2" class="list-group-item">
+							<a class="hola" href="#">
+								<h3><i class="fas fa-angle-right"></i> Carrera</h3>
+							</a>	
+								<ul>
+         							<a class="hola" href="{% static 'reports/autoreporte/Agronomia.pdf' %}"> Agronomía
+         							</a> 
+         						</ul>
+         					</ul>
+								
 
-
+					</div>
+				</div>
+			</div>
+			{% include 'app/logoCAAE.html' %}
+		</div>	
+	</section>		
 
 
 
