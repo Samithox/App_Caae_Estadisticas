@@ -45,7 +45,7 @@ header .logo{
 }
 
 .page-header {
-        background-color: #797878;
+        background-color: #595997;
         margin-top: 0;
         padding: 20px 20px 20px 40px;
 }
@@ -55,34 +55,3 @@ header .logo{
         font-size: 400%;
         text-decoration: none;
     }
-.wrapper .page-header nav{
-	margin-left: 85%;
-}    
-
-.container {
-	margin-left: 7%;
-	margin-top: 2%;
-	margin-bottom: 2%;
-}
-
-.container h4{
-	padding-left: 5%;
-	margin-top: -1.5%;
-	margin-bottom: 0%;
-}
-
-.container .row{
-	padding-left: 10%;
-	margin-top: -1.1%;
-}
-
-.row .logounach{
-	margin-right: 20%;
-	margin-top: -1.1%;
-}
-.box{
-	margin-left: 30%;
-	margin-right:10%;
-	background-color:  #CBCACA;
-}
-
