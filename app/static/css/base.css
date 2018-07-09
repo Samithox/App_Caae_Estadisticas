@@ -4,7 +4,7 @@ body {
 }
 
 body{
-	background-color: #BDBABA;
+	background-color: #dddddf;
 }
 
 header{
@@ -42,10 +42,11 @@ header .logo{
 	margin-left: 5%;
 	margin-right: auto;
 	margin-top: 2%;
+	background: #dddddf;
 }
 
 .page-header {
-        background-color: #595997;
+        background-color: #2762a1;
         margin-top: 0;
         padding: 20px 20px 20px 40px;
 }
