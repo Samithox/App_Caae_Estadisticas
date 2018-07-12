@@ -71,9 +71,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
-    'django.core.context_processors.request',
-)
+TEMPLATE_DIRS = join(PROJECT_ROOT, 'templates')
 
 
 STATIC_URL = '/static/'
