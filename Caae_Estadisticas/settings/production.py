@@ -1,4 +1,4 @@
-from Caae_Estadisticas.settings.base import base
+from Caae_Estadisticas.settings.base import *
 import os
  
 
