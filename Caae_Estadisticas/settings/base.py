@@ -72,11 +72,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-TEMPLATE_DIRS = join(BASE_DIR, 'templates')
+TEMPLATE_DIRS = join(APP_ROOT, 'templates')
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = join(BASE_DIR, 'static')
+STATIC_ROOT = join(APP_ROOT, 'static')
 
 
 LOGIN_REDIRECT_URL = '/'
