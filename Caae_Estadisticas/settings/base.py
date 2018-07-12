@@ -12,6 +12,7 @@ from django.conf import global_settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 PROJECT_ROOT = dirname(dirname(dirname(abspath(__file__))))
+APP_ROOT = (dirname(abspath(__file__)))
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 
@@ -71,11 +72,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-TEMPLATE_DIRS = join(PROJECT_ROOT, 'templates')
+TEMPLATE_DIRS = join(BASE_DIR, 'templates')
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = join(PROJECT_ROOT, 'static')
+STATIC_ROOT = join(BASE_DIR, 'static')
 
 
 LOGIN_REDIRECT_URL = '/'
