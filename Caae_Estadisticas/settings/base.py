@@ -7,12 +7,12 @@ https://docs.djangoproject.com/en/1.7/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
-#from os.path import abspath, dirname, join
-#from django.conf import global_settings
 from os.path import abspath, dirname, join
 from django.conf import global_settings
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 PROJECT_ROOT = dirname(dirname(dirname(abspath(__file__))))
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -75,13 +75,13 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = join(PROJECT_ROOT, 'static')
 
 
 LOGIN_REDIRECT_URL = '/'
 
 
 try:
-    from caae_site.settings.local_settings import  *
+    from Caae_Estadisticas.settings.local_settings import  *
 except ImportError:
     pass
