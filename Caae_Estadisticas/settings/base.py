@@ -72,7 +72,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-TEMPLATE_DIRS = join(PROJECT_ROOT, 'templates')
+TEMPLATE_DIRS = (
+    join(PROJECT_ROOT, 'templates'),
+    )
 
 
 STATIC_URL = '/static/'
