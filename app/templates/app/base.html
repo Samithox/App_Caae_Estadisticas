@@ -1,26 +1,28 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Estadisticas</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Estadisticas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="icon" href="{% static 'img/RC.png' %}">
-   <!-- <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> -->
-	<!--<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+
 </head>
-	<body>
-	
-		{% include 'app/header.html'%}
-		{% include 'app/title.html'%}
-		
-		<div class="list-group">
-			
-				{% block content %}
-				{% endblock %}
-				
-		</div>
-	</body>
-	<!--<script type="text/javascript" src="{% static 'js/efecto.js' %}"></script>-->
+
+<body>
+
+    {% include 'app/header.html'%} {% include 'app/title.html'%}
+
+    <div class="list-group">
+
+        {% block content %} {% endblock %}
+
+    </div>
+</body>
+<!--<script type="text/javascript" src="{% static 'js/efecto.js' %}"></script>-->
+
 </html>
