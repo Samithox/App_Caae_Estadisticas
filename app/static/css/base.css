@@ -5,6 +5,7 @@ body {
 
 body {
     background-color: #dddddf;
+    min-height: 75rem;
 }
 
 header {
@@ -57,7 +58,7 @@ header .logo {
 .page-header h1 a:visited,
 .page-header h1 a:active {
     color: #ffffff;
-    font-size: 400%;
+    font-size: 200%;
     text-decoration: none;
 }
 
