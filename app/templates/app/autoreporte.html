@@ -4,139 +4,117 @@
 
 <nav class="ruta" aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{% url 'home' %}">Home</a></li>
+        <li class="breadcrumb-item">
+            <i class="fas fa-home"></i>
+            <a href="{% url 'home' %}">Home</a>
+        </li>
         <li class="breadcrumb-item active" aria-current="page">Autoreporte</li>
     </ol>
 </nav>
 <div class="container">
-    <h4><i class="fas fa-angle-double-right"></i> Tenemos los siguientes reportes:</h4>
+    <h4>
+        <i class="fas fa-angle-double-right"></i> Tenemos los siguientes reportes:</h4>
 </div>
 <section class="container-fluid">
     <div class="row">
-        <div class="column">
+        <div class="col-lg-6 col-sm-12">
+            <div id="accordion" style="margin-right: 10px; margin-left: 20%">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapse1">
+                Universidad</a>
+                    </div>
+                    <div id="collapse1" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Universidad.pdf' %}" target="_blank">
+                    Universidad Adventista de Chile
+                </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapse2">
+                Facultad
+            </a>
+                    </div>
+                    <div id="collapse2" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_FACS.pdf' %}" target="_blank"> Facultad de Ciencias de la Salud
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_FECS.pdf' %}" target="_blank"> Facultad de Educación y Ciencias Sociales
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_FAIN.pdf' %}" target="_blank"> Facultad de Ingeniería y Negocios
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_FTEO.pdf' %}" target="_blank"> Facultad de Teología
+                </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapse3">
+                Carrera
+            </a>
+                    </div>
+                    <div id="collapse3" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Agronomia.pdf' %}" target="_blank"> Agronomía
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Contador_Auditor.pdf' %}" target="_blank"> Contador Auditor
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ed_Parvularia.pdf' %}" target="_blank"> Ed. Parvularia
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Enfermeria.pdf' %}" target="_blank"> Enfermería
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ing_Civil_Industrial.pdf' %}" target="_blank">
+                    Ing. Civil Industrial
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ing_Civil_Informatica.pdf' %}" target="_blank">
+                    Ing. Civil Informática
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ing_Comercial.pdf' %}" target="_blank"> Ing. Comercial
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ing_Electronica_Telecomunicaciones.pdf' %}" target="_blank">
+                    Ing. Electrónica y Telecomunicaciones
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Nutricion.pdf' %}" target="_blank"> Nutrición
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Obstetricia.pdf' %}" target="_blank"> Obstetricia y Opicultura
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Ed_Diferencial.pdf' %}" target="_blank">
+                    Ped. Ed. Diferencial
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Ed_Física.pdf' %}" target="_blank"> Ped. Ed. Física
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Ed_General_Basica.pdf' %}" target="_blank">
+                    Ped. Ed. General Básica
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Historia.pdf' %}" target="_blank"> Ped. Historia
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Inglés.pdf' %}" target="_blank"> Ped. Inglés
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Lenguaje.pdf' %}" target="_blank"> Ped. Lenguaje
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Matematica.pdf' %}" target="_blank"> Ped. Matemática
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Música.pdf' %}" target="_blank"> Ped. Música
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Psicología.pdf' %}" target="_blank"> Psicología
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Teología.pdf' %}" target="_blank"> Teología
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_TNS_Enfermeria.pdf' %}" target="_blank"> TNS Enfermeía
+                </a>
+                            <a class="list-group" href="{% static 'reports/autoreporte/2018_autoreporte_Trabajo_Social.pdf' %}" target="_blank"> Trabajo Social
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse1">Universidad</a>
-                        </h4>
-                    </div>
-                    <div id="collapse1" class="panel-collapse collapse">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Universidad.pdf' %}" target="_blank"> Universidad Adventista de Chile</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse2">Facultad</a>
-                        </h4>
-                    </div>
-                    <div id="collapse2" class="panel-collapse collapse">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_FACS.pdf' %}" target="_blank"> Facultad de Ciencias de la Salud</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_FECS.pdf' %}" target="_blank"> Facultad de Educación y Ciencias Sociales</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_FAIN.pdf' %}" target="_blank"> Facultad de Ingeniería y Negocios</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse3">Carrera</a>
-                        </h4>
-                    </div>
-                    <div id="collapse3" class="panel-collapse collapse">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Agronomia.pdf' %}" target="_blank"> Agronomía</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Contador_Auditor.pdf' %}" target="_blank"> Contador Auditor</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ed_Parvularia.pdf' %}" target="_blank"> Ed. Parvularia</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Enfermeria.pdf' %}" target="_blank"> Enfermería</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ing_Civil_Industrial.pdf' %}" target="_blank"> Ing. Civil Industrial</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ing_Civil_Informatica.pdf' %}" target="_blank"> Ing. Civil Informática</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ing_Comercial.pdf' %}" target="_blank"> Ing. Comercial</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ing_Electronica_Telecomunicaciones.pdf' %}" target="_blank">
-									Ing. Electrónica y Telecomunicaciones</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Nutricion.pdf' %}" target="_blank"> Nutrición</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Obstetricia.pdf' %}" target="_blank"> Obstetricia y Opicultura</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Ed_Diferencial.pdf' %}" target="_blank"> Ped. Ed. Diferencial</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Ed_Física.pdf' %}" target="_blank"> Ped. Ed. Física</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Ed_General_Basica.pdf' %}" target="_blank"> Ped. Ed. General Básica</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Historia.pdf' %}" target="_blank"> Ped. Historia</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Inglés.pdf' %}" target="_blank"> Ped. Inglés</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Lenguaje.pdf' %}" target="_blank"> Ped. Lenguaje</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Matematica.pdf' %}" target="_blank"> Ped. Matemática</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Ped_Música.pdf' %}" target="_blank"> Ped. Música</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Psicología.pdf' %}" target="_blank"> Psicología</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Teología.pdf' %}" target="_blank"> Teología</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_TNS_Enfermeria.pdf' %}" target="_blank"> TNS Enfermeía</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="{% static 'reports/autoreporte/2018_autoreporte_Trabajo_Social.pdf' %}" target="_blank"> Trabajo Social</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="row">
-            {% include 'app/logoCAAE.html' %}
-        </div>
+        {% include 'app/logoCAAE.html' %}
     </div>
 </section>
 
