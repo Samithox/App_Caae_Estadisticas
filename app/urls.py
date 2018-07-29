@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^home/reports/kolb$', views.kolb, name='kolb'),
     url(r'^home/reports/edward$', views.edward, name='edward'),
     url(r'^home/reports/tap$', views.tap, name='tap'),
+    url(r'^home/reports/sigae$', views.sigae, name='sigae'),
     ]

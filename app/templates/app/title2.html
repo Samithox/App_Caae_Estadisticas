@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-0">
+    <a class="navbar-brand" href="#" style="margin-top: 5px">
+        <img src="{% static 'img/Logo UnACh Blanco.png' %}" width="30" height="35" class="d-inline-block align-top" alt="" style="margin-top: -2.5px"> Reportes CAAE</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <h1 class="font-italic large"></h1>
+                </a>
+            </li>
+        </ul>
+        <a style="color: white"> Bienvenido
+            <i class="fas fa-user"> </i> {{ user.get_full_name }}
+            <a style="margin-left: 1%" href="{% url 'logout' %}">
+                <i class="fas fa-sign-out-alt"></i>Salir
+            </a>
+        </a>
+    </div>
+</nav>
