@@ -1,43 +1,365 @@
 {% extends 'app/base.html' %}
 
-
+<!--{% load staticfiles %}-->
 {% block content %}
 
-	<nav class="ruta" aria-label="breadcrumb">
-  		<ol class="breadcrumb">
-		    <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{% url 'home' %}">Home</a></li>
-		    <li class="breadcrumb-item active" aria-current="page">Taller de Habilidades</li>
-	 	 </ol>
-	</nav>
+<nav class="ruta" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <i class="fas fa-home"></i>
+            <a href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Taller de Habilidades</li>
+    </ol>
+</nav>
+<div class="container">
+    <h4>
+        <i class="fas fa-angle-double-right"></i> Tenemos los siguientes reportes:</h4>
+</div>
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12">
+            <div id="accordion1" style="margin-right: 10%; margin-left: 30%;">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapse1"><h3><i class="fas fa-angle-right"></i>
+                Universidad</h3></a>
+                    </div>
+                    <div id="collapse1" class="collapse" data-parent="#accordion1">
+                        <div id="accordion11">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse11" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2015</a></h4>
+                            </div> 
+                                 <div id="collapse11" class="collapse" data-parent="#accordion11">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Universidad.pdf' %}" target="_blank">
+                                            - Universidad Adventista de Chile</a>
+                                    </div>
+                                 </div>  
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse12" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2016</a></h4>
+                            </div> 
+                                 <div id="collapse12" class="collapse" data-parent="#accordion11">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Universidad.pdf' %}" target="_blank">
+                                       - Universidad Adventista de Chile</a>
+                                    </div>
+                                 </div>
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse13" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2017</a></h4>
+                            </div> 
+                                 <div id="collapse13" class="collapse" data-parent="#accordion11">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Universidad.pdf' %}" target="_blank">
+                                       - Universidad Adventista de Chile</a>
+                                    </div>
+                                 </div>
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse14" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2018</a></h4>
+                            </div> 
+                                 <div id="collapse14" class="collapse" data-parent="#accordion11">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Universidad.pdf' %}" target="_blank">
+                                       - Universidad Adventista de Chile</a>
+                                    </div>
+                                 </div>     
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div id="accordion2" style="margin-right: 10%; margin-left: 30%;">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapse2"><h3><i class="fas fa-angle-right"></i>
+                Facultades</h3></a>
+                    </div>
+                    <div id="collapse2" class="collapse" data-parent="#accordion2">
+                        <div id="accordion21">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse21" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2015</a></h4>
+                            </div> 
+                                 <div id="collapse21" class="collapse" data-parent="#accordion21">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_FACS.pdf' %}" target="_blank">
+                                            - Facultad de Ciencias de la salud</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_FECS.pdf' %}" target="_blank">
+                                            - Facultad de Educación y Ciencias Sociales</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_FAIN.pdf' %}" target="_blank">
+                                            - Facultad de Ingeniería y Negocios</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_FTEO.pdf' %}" target="_blank">
+                                            - Facultad de Teología</a>            
+                                    </div>
+                                 </div>  
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse22" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2016</a></h4>
+                            </div> 
+                                 <div id="collapse22" class="collapse" data-parent="#accordion21">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_FACS.pdf' %}" target="_blank">
+                                            - Facultad de Ciencias de la salud</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_FECS.pdf' %}" target="_blank">
+                                            - Facultad de Educación y Ciencias Sociales</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_FAIN.pdf' %}" target="_blank">
+                                            - Facultad de Ingeniería y Negocios</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_FTEO.pdf' %}" target="_blank">
+                                            - Facultad de Teología</a>            
+                                    </div>
+                                 </div>  
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse23" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2017</a></h4>
+                            </div> 
+                                 <div id="collapse23" class="collapse" data-parent="#accordion21">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_FACS.pdf' %}" target="_blank">
+                                            - Facultad de Ciencias de la salud</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_FECS.pdf' %}" target="_blank">
+                                            - Facultad de Educación y Ciencias Sociales</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_FAIN.pdf' %}" target="_blank">
+                                            - Facultad de Ingeniería y Negocios</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_FTEO.pdf' %}" target="_blank">
+                                            - Facultad de Teología</a>            
+                                    </div>
+                                 </div>  
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse24" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2018</a></h4>
+                            </div> 
+                                 <div id="collapse24" class="collapse" data-parent="#accordion21">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_FACS.pdf' %}" target="_blank">
+                                            - Facultad de Ciencias de la salud</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_FECS.pdf' %}" target="_blank">
+                                            - Facultad de Educación y Ciencias Sociales</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_FAIN.pdf' %}" target="_blank">
+                                            - Facultad de Ingeniería y Negocios</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_FTEO.pdf' %}" target="_blank">
+                                            - Facultad de Teología</a>            
+                                    </div>
+                                 </div>                 
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div id="accordion3" style="margin-right: 10%; margin-left: 30%;">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapse3"><h3><i class="fas fa-angle-right"></i>
+                Carreras</h3></a>
+                    </div>
+                    <div id="collapse3" class="collapse" data-parent="#accordion3">
+                        <div id="accordion31">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse31" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2015</a></h4>
+                            </div> 
+                                 <div id="collapse31" class="collapse" data-parent="#accordion31">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Agronomia.pdf' %}" target="_blank">
+                                            - Agronomía</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Contador_Auditor.pdf' %}" target="_blank">
+                                            - Contador Auditor</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ed_Parvularia.pdf' %}" target="_blank">
+                                            - Ed. Parvularia</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Enfermeria.pdf' %}" target="_blank">
+                                            - Enfermería</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ing_Civil_Industrial.pdf' %}" target="_blank">
+                                            - Ing. Civil Industria</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ing_Civil_Informatica.pdf' %}" target="_blank">
+                                            - Ing. Civil Informática</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ing_Comercial.pdf' %}" target="_blank">
+                                            - Ing. Comercial</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ing_Electronica_Telecomunicaciones.pdf' %}" target="_blank">
+                                            - Ing. Electrónica y Telecomunicaciónes</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Nutricion.pdf' %}" target="_blank">
+                                            - Nutrición</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Obstetricia.pdf' %}" target="_blank">
+                                            - Obstetricia y Opicultura</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ped_Ed_Diferencial.pdf' %}" target="_blank">
+                                            - Ped. Ed. Diferencial</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ped_Ed_Física.pdf' %}" target="_blank">
+                                            - Ped. Ed. Física</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ped_Ed_General_Basica.pdf' %}" target="_blank">
+                                            - Ped. Ed. General Básica</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ped_Historia.pdf' %}" target="_blank">
+                                            - Ped. Historia</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ped_Inglés.pdf' %}" target="_blank">
+                                            - Ped. Inglés</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ped_Lenguaje.pdf' %}" target="_blank">
+                                            - Ped. Lenguaje</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ped_Matematica.pdf' %}" target="_blank">
+                                            - Ped. Matemática</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Ped_Música.pdf' %}" target="_blank">
+                                            - Ped. Música</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Psicología.pdf' %}" target="_blank">
+                                            - Psicología</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Teología.pdf' %}" target="_blank">
+                                            - Teología</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_TNS_Enfermeria.pdf' %}" target="_blank">
+                                            - TNS Enfermeía</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2015_tap_Trabajo_Social.pdf' %}" target="_blank">
+                                            - Trabajo Social</a>                                                                                    
+                                    </div>
+                                 </div>
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse32" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2016</a></h4>
+                            </div> 
+                                 <div id="collapse32" class="collapse" data-parent="#accordion31">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Agronomia.pdf' %}" target="_blank">
+                                            - Agronomía</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Contador_Auditor.pdf' %}" target="_blank">
+                                            - Contador Auditor</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ed_Parvularia.pdf' %}" target="_blank">
+                                            - Ed. Parvularia</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Enfermeria.pdf' %}" target="_blank">
+                                            - Enfermería</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ing_Civil_Industrial.pdf' %}" target="_blank">
+                                            - Ing. Civil Industria</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ing_Civil_Informatica.pdf' %}" target="_blank">
+                                            - Ing. Civil Informática</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ing_Comercial.pdf' %}" target="_blank">
+                                            - Ing. Comercial</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ing_Electronica_Telecomunicaciones.pdf' %}" target="_blank">
+                                            - Ing. Electrónica y Telecomunicaciónes</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Nutricion.pdf' %}" target="_blank">
+                                            - Nutrición</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Obstetricia.pdf' %}" target="_blank">
+                                            - Obstetricia y Opicultura</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ped_Ed_Diferencial.pdf' %}" target="_blank">
+                                            - Ped. Ed. Diferencial</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ped_Ed_Física.pdf' %}" target="_blank">
+                                            - Ped. Ed. Física</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ped_Ed_General_Basica.pdf' %}" target="_blank">
+                                            - Ped. Ed. General Básica</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ped_Historia.pdf' %}" target="_blank">
+                                            - Ped. Historia</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ped_Inglés.pdf' %}" target="_blank">
+                                            - Ped. Inglés</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ped_Lenguaje.pdf' %}" target="_blank">
+                                            - Ped. Lenguaje</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ped_Matematica.pdf' %}" target="_blank">
+                                            - Ped. Matemática</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Ped_Música.pdf' %}" target="_blank">
+                                            - Ped. Música</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Psicología.pdf' %}" target="_blank">
+                                            - Psicología</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Teología.pdf' %}" target="_blank">
+                                            - Teología</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_TNS_Enfermeria.pdf' %}" target="_blank">
+                                            - TNS Enfermeía</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2016_tap_Trabajo_Social.pdf' %}" target="_blank">
+                                            - Trabajo Social</a>                                                                                    
+                                    </div>
+                                 </div>       
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse33" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2017</a></h4>
+                            </div> 
+                                 <div id="collapse33" class="collapse" data-parent="#accordion31">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Agronomia.pdf' %}" target="_blank">
+                                            - Agronomía</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Contador_Auditor.pdf' %}" target="_blank">
+                                            - Contador Auditor</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ed_Parvularia.pdf' %}" target="_blank">
+                                            - Ed. Parvularia</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Enfermeria.pdf' %}" target="_blank">
+                                            - Enfermería</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ing_Civil_Industrial.pdf' %}" target="_blank">
+                                            - Ing. Civil Industria</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ing_Civil_Informatica.pdf' %}" target="_blank">
+                                            - Ing. Civil Informática</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ing_Comercial.pdf' %}" target="_blank">
+                                            - Ing. Comercial</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ing_Electronica_Telecomunicaciones.pdf' %}" target="_blank">
+                                            - Ing. Electrónica y Telecomunicaciónes</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Nutricion.pdf' %}" target="_blank">
+                                            - Nutrición</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Obstetricia.pdf' %}" target="_blank">
+                                            - Obstetricia y Opicultura</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ped_Ed_Diferencial.pdf' %}" target="_blank">
+                                            - Ped. Ed. Diferencial</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ped_Ed_Física.pdf' %}" target="_blank">
+                                            - Ped. Ed. Física</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ped_Ed_General_Basica.pdf' %}" target="_blank">
+                                            - Ped. Ed. General Básica</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ped_Historia.pdf' %}" target="_blank">
+                                            - Ped. Historia</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ped_Inglés.pdf' %}" target="_blank">
+                                            - Ped. Inglés</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ped_Lenguaje.pdf' %}" target="_blank">
+                                            - Ped. Lenguaje</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ped_Matematica.pdf' %}" target="_blank">
+                                            - Ped. Matemática</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Ped_Música.pdf' %}" target="_blank">
+                                            - Ped. Música</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Psicología.pdf' %}" target="_blank">
+                                            - Psicología</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Teología.pdf' %}" target="_blank">
+                                            - Teología</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_TNS_Enfermeria.pdf' %}" target="_blank">
+                                            - TNS Enfermeía</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2017_tap_Trabajo_Social.pdf' %}" target="_blank">
+                                            - Trabajo Social</a>                                                                                    
+                                    </div>
+                                 </div>
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse34" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2018</a></h4>
+                            </div> 
+                                 <div id="collapse34" class="collapse" data-parent="#accordion31">
+                                    <div class="card-body">
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Agronomia.pdf' %}" target="_blank">
+                                            - Agronomía</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Contador_Auditor.pdf' %}" target="_blank">
+                                            - Contador Auditor</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ed_Parvularia.pdf' %}" target="_blank">
+                                            - Ed. Parvularia</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Enfermeria.pdf' %}" target="_blank">
+                                            - Enfermería</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ing_Civil_Industrial.pdf' %}" target="_blank">
+                                            - Ing. Civil Industria</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ing_Civil_Informatica.pdf' %}" target="_blank">
+                                            - Ing. Civil Informática</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ing_Comercial.pdf' %}" target="_blank">
+                                            - Ing. Comercial</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ing_Electronica_Telecomunicaciones.pdf' %}" target="_blank">
+                                            - Ing. Electrónica y Telecomunicaciónes</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Nutricion.pdf' %}" target="_blank">
+                                            - Nutrición</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Obstetricia.pdf' %}" target="_blank">
+                                            - Obstetricia y Opicultura</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ped_Ed_Diferencial.pdf' %}" target="_blank">
+                                            - Ped. Ed. Diferencial</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ped_Ed_Física.pdf' %}" target="_blank">
+                                            - Ped. Ed. Física</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ped_Ed_General_Basica.pdf' %}" target="_blank">
+                                            - Ped. Ed. General Básica</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ped_Historia.pdf' %}" target="_blank">
+                                            - Ped. Historia</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ped_Inglés.pdf' %}" target="_blank">
+                                            - Ped. Inglés</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ped_Lenguaje.pdf' %}" target="_blank">
+                                            - Ped. Lenguaje</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ped_Matematica.pdf' %}" target="_blank">
+                                            - Ped. Matemática</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Ped_Música.pdf' %}" target="_blank">
+                                            - Ped. Música</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Psicología.pdf' %}" target="_blank">
+                                            - Psicología</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Teología.pdf' %}" target="_blank">
+                                            - Teología</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_TNS_Enfermeria.pdf' %}" target="_blank">
+                                            - TNS Enfermeía</a>
+                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/tap/2018_tap_Trabajo_Social.pdf' %}" target="_blank">
+                                            - Trabajo Social</a>                                                                                    
+                                    </div>
+                                 </div>     
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        {% include 'app/logoCAAE.html' %}
+    </div>
+</section>
 
-	<div class="container">
-		<h4><i class="fas fa-angle-double-right"></i> Tenemos los siguientes reportes:</h4>		
-	</div>
-	<section class="container-fluid">
-		<div class="row">
-			<div class="col-lg-6 col-sm-12">
-				<div class="box">
-					<div  class="list-group">
-						<ul id="open-hide" class="list-group-item">
-							<a id="open-hide" href="#">
-								<h3><i class="fas fa-angle-right"></i> Universidad</h3>
-							</a>
-						</ul>
-						<ul id="open-hide" id="lista2" class="list-group-item">
-							<a href="#">
-								<h3><i class="fas fa-angle-right"></i> Facultad</h3>
-							</a>
-						</ul>
-						<ul id="open-hide" id="lista2" class="list-group-item">
-							<a href="#">
-								<h3><i class="fas fa-angle-right"></i> Carrera</h3>
-							</a>	
-								
-         				</ul>
-					</div>
-				</div>
-			</div>
-			{% include 'app/logoCAAE.html' %}
-		</div>	
-	</section>
-{% endblock %}	
+
+
+{% endblock %}

@@ -24,6 +24,10 @@ def edward(request):
 
 @login_required
 def tap(request):
-    return render(request, 'app/tap.html',{})            
+    return render(request, 'app/tap.html',{}) 
+
+@login_required
+def sigae(request):
+    return render(request, 'app/sigae.html',{})               
   
 
