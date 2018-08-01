@@ -92,13 +92,13 @@ TEMPLATES = [
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = join(PROJECT_ROOT, 'static')
+STATIC_ROOT = "C:\inetpub\wwwroot\App_Caae_Estadisticas/app\static"
 
 
 LOGIN_REDIRECT_URL = '/'
 
 
 try:
-    from Caae_Estadisticas.settings.local_settings import  *
+    from Caae_Estadisticas.settings.production import  *
 except ImportError:
     pass

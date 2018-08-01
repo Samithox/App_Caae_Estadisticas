@@ -18,4 +18,4 @@ DATABASES = {
 
 COMPRESS_OFFLINE = True
 
-ALLOWED_HOSTS = ['localhost','172.0.0.0']
+ALLOWED_HOSTS = ['localhost','172.0.0.0','172.24.19.100']
