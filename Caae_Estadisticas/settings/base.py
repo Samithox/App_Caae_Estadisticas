@@ -49,6 +49,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+
+
 ROOT_URLCONF = 'Caae_Estadisticas.urls'
 
 WSGI_APPLICATION = 'Caae_Estadisticas.wsgi.application'
