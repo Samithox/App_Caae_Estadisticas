@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-class Reports(models.Model):
+class Report(models.Model):
     nombre = models.TextField(max_length=30)
     AUTOREPORTE = 'AUTO'
     SIGAE = 'SIGAE'
@@ -39,7 +39,7 @@ class Reports(models.Model):
         (FACULTAD_TEOLOGIA,'Facultad de Teologia'),
         (UNIVERSIDAD,'Universidad Adventista de Chile'),
         )
-    reporte_Facultad = models.CharField(max_length=5,choices=FACULTAD_REPORTS_CHOICES,default=UNIVERSIDAD)
+    reporte_Facultad = models.CharField(max_length=5,choices=FACULTAD_REPORTS_CHOICES,blank=True)
     AGRONOMIA='AGRO'
     CONTADOR_AUDITOR='CON_AUD'
     ED_PARVULARIA='ED_PARV'
@@ -89,6 +89,7 @@ class Reports(models.Model):
     carrera_reporte = models.CharField(max_length=50,choices=CARRERAS_REPORTS_CHOICE,blank=True)
     ano_reporte = models.IntegerField(blank=True,default=2015)
     fecha_publicacion = models.DateTimeField(blank=True, null=True)
+    reporte = models.FileField(null=True)
 
     def publish(self):
         self.fecha_publicacion = timezone.now()
@@ -111,7 +112,7 @@ class Profile(models.Model):
         (FACULTAD_TEOLOGIA,'Facultad de Teologia'),
         (UNIVERSIDAD,'Universidad Adventista de Chile'),
         )
-    facultad = models.CharField(max_length=5,choices=FACULTAD_CHOICES,default=UNIVERSIDAD)
+    facultad = models.CharField(max_length=5,choices=FACULTAD_CHOICES,blank=True)
     TODAS='ALL'
     AGRONOMIA='AGRO'
     CONTADOR_AUDITOR='CON_AUD'
@@ -160,7 +161,7 @@ class Profile(models.Model):
         (TNS_ENFERMERIA,'TNS en Enfermeria'),
         (TRABAJO_SOCIAL,'Trabajo Social'),
         )
-    carrera = models.CharField(max_length=50,choices=CARRERAS_CHOICE,default=TODAS)
+    carrera = models.CharField(max_length=50,choices=CARRERAS_CHOICE,blank=True)
     ADMINISTRATIVO = 'ADMINISTRATIVO'
     DECANO = 'DECANO'
     DIR_CARRERA = 'DIR_CARRERA'
@@ -169,7 +170,7 @@ class Profile(models.Model):
         (DECANO,'Decano'),
         (DIR_CARRERA,'Director de Carrera'),
         )
-    tipo_Usuario = models.CharField(max_length=20,choices=TIPO_USUARIO_CHOICE,default=ADMINISTRATIVO)
+    tipo_Usuario = models.CharField(max_length=20,choices=TIPO_USUARIO_CHOICE,blank=True)
     NIVEL_1 = '1'
     NIVEL_2 = '2'
     NIVEL_3 = '3'
@@ -178,7 +179,7 @@ class Profile(models.Model):
         (NIVEL_2,'2'),
         (NIVEL_3,'3'),
         )
-    permiso = models.CharField(max_length=1,choices=PERMISO_CHOICE,default=NIVEL_1)
+    permiso = models.CharField(max_length=1,choices=PERMISO_CHOICE,blank=True)
 
     USERNAME_FIELD = 'user'
     REQUIRED_FIELDS = ('facultad','carrera','tipo_Usuario','permiso')
