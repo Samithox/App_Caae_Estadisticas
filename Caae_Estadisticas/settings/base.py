@@ -92,7 +92,7 @@ TEMPLATES = [
     },
 ]
 
-
+#AUTH_PROFILE_MODULE = 'Profile.Profiles'
 STATIC_URL = '/static/'
 STATIC_ROOT = join(PROJECT_ROOT, 'static')
 
