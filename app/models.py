@@ -5,7 +5,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 class Report(models.Model):
-    nombre = models.TextField(max_length=30)
+    nombre = models.CharField(max_length=30)
     AUTOREPORTE = 'AUTO'
     SIGAE = 'SIGAE'
     KOLB = 'KOLB'
@@ -90,6 +90,7 @@ class Report(models.Model):
     ano_reporte = models.IntegerField(blank=True,default=2015)
     fecha_publicacion = models.DateTimeField(blank=True, null=True)
     reporte = models.FileField(null=True)
+    report = models.Manager()
 
     def publish(self):
         self.fecha_publicacion = timezone.now()

@@ -1,10 +1,13 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
+from .mixins import user_test_nivel_one
+from .models import Profile, Report
 
 # Create your views here.
 @login_required
+#@user_passes_test(user_test_nivel_one)
 def home(request):
-    return render(request, 'app/reportes.html',{})
+	return render(request, 'app/reportes.html',{})
 
 @login_required
 def inicio(request):
@@ -12,7 +15,16 @@ def inicio(request):
 
 @login_required
 def autoreporte(request):
-    return render(request, 'app/autoreporte.html',{})
+	if request.user.profile.permiso == 2:
+			# Decano
+		reports = Report.objects.filter(reporte_Facultad=request.user.profile.facultad,tipo_reporte='Autoreporte')
+
+	elif request.user.profile.permiso == 3:
+			# Director carrera
+		reports = Report.objects.filter(carrera_reporte=request.user.profile.carrera,tipo_reporte='Autoreporte') 
+	else:
+		reports = Report.objects.filter(tipo_reporte='Autoreporte')
+	return render(request, 'app/autoreporte.html',{'reports': reports})
 
 @login_required
 def kolb(request):

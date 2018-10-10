@@ -64,7 +64,7 @@ WSGI_APPLICATION = 'Caae_Estadisticas.wsgi.application'
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'America/Santiago'
 
@@ -95,7 +95,8 @@ TEMPLATES = [
 #AUTH_PROFILE_MODULE = 'Profile.Profiles'
 STATIC_URL = '/static/'
 STATIC_ROOT = join(PROJECT_ROOT, 'static')
-
+MEDIA_ROOT = join(PROJECT_ROOT, 'reportes')
+MEDIA_URL = '/reportes/'
 
 LOGIN_REDIRECT_URL = '/'
 
