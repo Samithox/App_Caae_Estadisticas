@@ -20,18 +20,25 @@
 <section class="container-fluid">
     <div class="row">
         <div class="col-lg-6 col-sm-12">
-            {% for report in reports %}
+            <div id="accordion1" style="margin-right: 10%; margin-left: 30%;">
                 <div class="card">
                     <div class="card-header">
                         <a class="card-link" data-toggle="collapse" href="#collapse1"><h3><i class="fas fa-angle-right"></i>
-                            {{report.tipo_reporte}}</h3></a>
+                            Reportes</h3></a>
                     </div>
                    <div class="card-body">
-                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                            - {{report.nombre}}</a>
+                    {% ifequal report.ano_reporte 2018 %}
+                        {% if report.reporte_Departamento == "UNACH" %}
+                            {% for report in reports %}
+                                <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                    - {{report.nombre}} {{report.reporte_Departamento}}</a>
+                            {% endfor %}
+                        {% endif %}      
+                    {% endifequal %}          
                     </div>
                 </div>
-            {% endfor %} 
+            </div>    
+             
         </div>
         {% include 'app/logoCAAE.html' %}
     </div>

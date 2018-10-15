@@ -5,16 +5,16 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 class Report(models.Model):
-    nombre = models.CharField(max_length=30)
-    AUTOREPORTE = 'AUTO'
-    SIGAE = 'SIGAE'
-    KOLB = 'KOLB'
-    EDWARD = 'EDWARD'
-    TALL_HABILIDADES = 'TALL_HAB'
-    PROPEDEUTICO = 'PROPE'
-    HONEY_ALONSO = 'HON_ALON'
-    TUTORES = 'TUTORES'
-    AYUDANTIAS = 'AYUDANTIAS'
+    nombre = models.CharField(max_length=50)
+    AUTOREPORTE = 'Autoreporte'
+    SIGAE = 'Sigae'
+    KOLB = 'Kolb'
+    EDWARD = 'Edward'
+    TALL_HABILIDADES = 'Taller_Habilidades'
+    PROPEDEUTICO = 'Propedeutico'
+    HONEY_ALONSO = 'Honey_Alonso'
+    TUTORES = 'Tutores'
+    AYUDANTIAS = 'Ayudantias'
     TIPO_REPORTE_CHOICES = (
         (AUTOREPORTE,'Autoreporte'),
         (SIGAE,'Sigae'),
@@ -32,14 +32,6 @@ class Report(models.Model):
     FACULTAD_INGENIERIA = 'FAIN'
     FACULTAD_TEOLOGIA = 'FTEO'
     UNIVERSIDAD = 'UNACH'
-    FACULTAD_REPORTS_CHOICES =(
-        (FACULTAD_DE_EDUCACION,'Facultad de Educacion y Ciencias Sociales'),
-        (FACULTAD_DE_SALUD,'Facultad de Ciencias de la Salud '),
-        (FACULTAD_INGENIERIA,'Facultad de Ingenieria y Negocios'),
-        (FACULTAD_TEOLOGIA,'Facultad de Teologia'),
-        (UNIVERSIDAD,'Universidad Adventista de Chile'),
-        )
-    reporte_Facultad = models.CharField(max_length=5,choices=FACULTAD_REPORTS_CHOICES,blank=True)
     AGRONOMIA='AGRO'
     CONTADOR_AUDITOR='CON_AUD'
     ED_PARVULARIA='ED_PARV'
@@ -62,7 +54,12 @@ class Report(models.Model):
     TEOLOGIA='TEO'
     TNS_ENFERMERIA='TNS_ENF'
     TRABAJO_SOCIAL='TRAB_SOC'
-    CARRERAS_REPORTS_CHOICE = (
+    FACULTAD_REPORTS_CHOICES =(
+        (FACULTAD_DE_EDUCACION,'Facultad de Educacion y Ciencias Sociales'),
+        (FACULTAD_DE_SALUD,'Facultad de Ciencias de la Salud '),
+        (FACULTAD_INGENIERIA,'Facultad de Ingenieria y Negocios'),
+        (FACULTAD_TEOLOGIA,'Facultad de Teologia'),
+        (UNIVERSIDAD,'Universidad Adventista de Chile'),
         (AGRONOMIA,'Agronomia'),
         (CONTADOR_AUDITOR,'Contador Auditor'),
         (ED_PARVULARIA,'Educacion Parvularia'),
@@ -86,18 +83,18 @@ class Report(models.Model):
         (TNS_ENFERMERIA,'TNS en Enfermeria'),
         (TRABAJO_SOCIAL,'Trabajo Social'),
         )
-    carrera_reporte = models.CharField(max_length=50,choices=CARRERAS_REPORTS_CHOICE,blank=True)
+    reporte_Departamento = models.CharField(max_length=50,choices=FACULTAD_REPORTS_CHOICES,blank=True)
     ano_reporte = models.IntegerField(blank=True,default=2015)
     fecha_publicacion = models.DateTimeField(blank=True, null=True)
     reporte = models.FileField(null=True)
-    report = models.Manager()
+    objects  = models.Manager()
 
     def publish(self):
         self.fecha_publicacion = timezone.now()
         self.save()
 
     def __str__(self):
-        return self.nombre
+        return '%s_%s_%s' % (self.ano_reporte, self.tipo_reporte,self.nombre)
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE,related_name='profile')
@@ -108,7 +105,7 @@ class Profile(models.Model):
     UNIVERSIDAD = 'UNACH'
     FACULTAD_CHOICES =(
         (FACULTAD_DE_EDUCACION,'Facultad de Educacion y Ciencias Sociales'),
-        (FACULTAD_DE_SALUD,'Facultad de Ciencias de la Salud '),
+        (FACULTAD_DE_SALUD,'Facultad de Ciencias de la Salud'),
         (FACULTAD_INGENIERIA,'Facultad de Ingenieria y Negocios'),
         (FACULTAD_TEOLOGIA,'Facultad de Teologia'),
         (UNIVERSIDAD,'Universidad Adventista de Chile'),

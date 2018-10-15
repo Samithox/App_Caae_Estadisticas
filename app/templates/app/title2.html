@@ -12,7 +12,7 @@
             </li>
         </ul>
         <a style="color: white"> Bienvenido
-            <i class="fas fa-user"> </i> {{ user.get_full_name }}
+            <i class="fas fa-user"> </i> {{ user.get_full_name }} {{user.profile.permiso}} {{user.profile.facultad}} {{user.profile.tipo_Usuario}}
             <a style="margin-left: 1%" href="{% url 'logout' %}">
                 <i class="fas fa-sign-out-alt"></i>Salir
             </a>
