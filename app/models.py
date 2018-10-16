@@ -37,11 +37,13 @@ class Report(models.Model):
     ED_PARVULARIA='ED_PARV'
     ENFERMERIA='ENF'
     ING_CIVIL_INFORMATICA='ING_CIV_INF'
+    ING_INFORMATICA='ING_INF'
     ING_COMERCIAL='ING_COM'
     ING_ELECTRONICA='ING_ELEC'
     ING_CIVIL_INDUSTRIAL='ING_CIV_IND'
     NUTRICION='NUT'
     OBSTETRICIA='OBS'
+    PED_BIO = 'PED_BIO'
     PED_ED_DIFERENCIAL='PED_ED_DIF'
     PED_ED_FISICA='PED_ED_FIS'
     PED_ED_GEN_BASICA='PED_ED_GEN_BAS'
@@ -65,11 +67,13 @@ class Report(models.Model):
         (ED_PARVULARIA,'Educacion Parvularia'),
         (ENFERMERIA,'Enfermeria'),
         (ING_CIVIL_INFORMATICA,'Ing. Civil en Informatica'),
+        (ING_INFORMATICA,'Ing. Informatica'),
         (ING_COMERCIAL,'Ing. Comercial'),
         (ING_ELECTRONICA,'Ing. en Electronica y Telecomunicaciones'),
         (ING_CIVIL_INDUSTRIAL,'Ingenieria Civil Industrial'),
         (NUTRICION,'Nutricion y Dietetica'),
         (OBSTETRICIA,'Obstetricia y Puericultura'),
+        (PED_BIO,'Ped. en Biologia'),
         (PED_ED_DIFERENCIAL,'Ped. en Educ. Diferencial m/DEA'),
         (PED_ED_FISICA,'Ped. en Educacion Fisica'),
         (PED_ED_GEN_BASICA,'Ped. en Educacion General Basica'),

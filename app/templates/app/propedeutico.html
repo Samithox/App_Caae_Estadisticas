@@ -8,7 +8,7 @@
             <i class="fas fa-home"></i>
             <a href="{% url 'home' %}">Home</a>
         </li>
-        <li class="breadcrumb-item active" aria-current="page">Sigae</li>
+        <li class="breadcrumb-item active" aria-current="page">Propedeutico</li>
     </ol>
 </nav>
 <div class="container">
@@ -244,7 +244,7 @@
                                     <div class="card-body">
                                         {% for report in reports %}
                                             {% if report.ano_reporte == 2018 %}
-                                                {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
                                                 
                                                     <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
                                                         - {{report.nombre}}</a>

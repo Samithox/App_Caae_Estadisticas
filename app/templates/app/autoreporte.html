@@ -15,8 +15,6 @@
     <h4>
         <i class="fas fa-angle-double-right"></i> Tenemos los siguientes reportes:</h4>
 </div>
-
-
 <section class="container-fluid">
     <div class="row">
         <div class="col-lg-6 col-sm-12">
@@ -24,21 +22,242 @@
                 <div class="card">
                     <div class="card-header">
                         <a class="card-link" data-toggle="collapse" href="#collapse1"><h3><i class="fas fa-angle-right"></i>
-                            Reportes</h3></a>
+                Universidad</h3></a>
                     </div>
-                   <div class="card-body">
-                    {% ifequal report.ano_reporte 2018 %}
-                        {% if report.reporte_Departamento == "UNACH" %}
-                            {% for report in reports %}
-                                <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                    - {{report.nombre}} {{report.reporte_Departamento}}</a>
-                            {% endfor %}
-                        {% endif %}      
-                    {% endifequal %}          
+                    <div id="collapse1" class="collapse" data-parent="#accordion1">
+                        <div id="accordion11">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse11" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2015</a></h4>
+                            </div> 
+                                 <div id="collapse11" class="collapse" data-parent="#accordion11">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2015 %}
+                                                {% if report.reporte_Departamento == "UNACH" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                 </div>  
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse12" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2016</a></h4>
+                            </div> 
+                                 <div id="collapse12" class="collapse" data-parent="#accordion11">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2016 %}
+                                                {% if report.reporte_Departamento == "UNACH" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                 </div>
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse13" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2017</a></h4>
+                            </div> 
+                                 <div id="collapse13" class="collapse" data-parent="#accordion11">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2017 %}
+                                                {% if report.reporte_Departamento == "UNACH" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                 </div>
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse14" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2018</a></h4>
+                            </div> 
+                                 <div id="collapse14" class="collapse" data-parent="#accordion11">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2018 %}
+                                                {% if report.reporte_Departamento == "UNACH" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                 </div>     
+                        </div>
                     </div>
-                </div>
-            </div>    
-             
+                </div>  
+            </div>
+            <div id="accordion2" style="margin-right: 10%; margin-left: 30%;">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapse2"><h3><i class="fas fa-angle-right"></i>
+                Facultades</h3></a>
+                    </div>
+                    <div id="collapse2" class="collapse" data-parent="#accordion2">
+                        <div id="accordion21">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse21" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2015</a></h4>
+                            </div> 
+                                 <div id="collapse21" class="collapse" data-parent="#accordion21">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2015 %}
+                                                {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FTEO"  %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}           
+                                    </div>
+                                 </div>  
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse22" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2016</a></h4>
+                            </div> 
+                                 <div id="collapse22" class="collapse" data-parent="#accordion21">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2016 %}
+                                                {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FTEO"  %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}            
+                                    </div>
+                                 </div>  
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse23" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2017</a></h4>
+                            </div> 
+                                 <div id="collapse23" class="collapse" data-parent="#accordion21">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2017 %}
+                                                {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FTEO"  %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}            
+                                    </div>
+                                 </div>  
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse24" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2018</a></h4>
+                            </div> 
+                                 <div id="collapse24" class="collapse" data-parent="#accordion21">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2018 %}
+                                                {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FTEO"  %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}            
+                                    </div>
+                                 </div>                 
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div id="accordion3" style="margin-right: 10%; margin-left: 30%;">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapse3"><h3><i class="fas fa-angle-right"></i>
+                Carreras</h3></a>
+                    </div>
+                    <div id="collapse3" class="collapse" data-parent="#accordion3">
+                        <div id="accordion31">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse31" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2015</a></h4>
+                            </div> 
+                                 <div id="collapse31" class="collapse" data-parent="#accordion31">
+                                    <div class="card-body">
+                                       {% for report in reports %}
+                                            {% if report.ano_reporte == 2015 %}
+                                                {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}                                                                                    
+                                    </div>
+                                 </div>
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse32" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2016</a></h4>
+                            </div> 
+                                 <div id="collapse32" class="collapse" data-parent="#accordion31">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2016 %}
+                                                {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}                                                                                    
+                                    </div>
+                                 </div>       
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse33" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2017</a></h4>
+                            </div> 
+                                 <div id="collapse33" class="collapse" data-parent="#accordion31">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2017 %}
+                                                {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}                                                                                    
+                                    </div>
+                                 </div>
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapse34" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2018</a></h4>
+                            </div> 
+                                 <div id="collapse34" class="collapse" data-parent="#accordion31">
+                                    <div class="card-body">
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2018 %}
+                                                {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}                                                                                    
+                                    </div>
+                                 </div>     
+                        </div>
+                    </div>
+                </div>  
+            </div>
         </div>
         {% include 'app/logoCAAE.html' %}
     </div>
