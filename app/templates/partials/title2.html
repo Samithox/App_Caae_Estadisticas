@@ -11,8 +11,9 @@
                 </a>
             </li>
         </ul>
-        <a style="color: white"> Bienvenido
-            <i class="fas fa-user"> </i> {{ user.get_full_name }}
+        <a style="color: white"> Bienvenido <i class="glyphicon glyphicon-user"></i>
+            <i class="fas fa-user"></i>
+                {{user.get_full_name}}
             <a style="margin-left: 1%" href="{% url 'logout' %}">
                 <i class="fas fa-sign-out-alt"></i>Salir
             </a>

@@ -167,12 +167,14 @@ class Profile(models.Model):
     ADMINISTRATIVO = 'ADMINISTRATIVO'
     DECANO = 'DECANO'
     DIR_CARRERA = 'DIR_CARRERA'
+    SEC_ACAD = 'SEC_ACAD'
     TIPO_USUARIO_CHOICE =(
         (ADMINISTRATIVO,'Administrativo'),
         (DECANO,'Decano'),
         (DIR_CARRERA,'Director de Carrera'),
+        (SEC_ACAD,'Secretario Academico'),
         )
-    tipo_Usuario = models.CharField(max_length=20,choices=TIPO_USUARIO_CHOICE,blank=True)
+    tipo_Usuario = models.CharField(max_length=25,choices=TIPO_USUARIO_CHOICE,blank=True)
     NIVEL_1 = '1'
     NIVEL_2 = '2'
     NIVEL_3 = '3'
