@@ -95,14 +95,14 @@ TEMPLATES = [
 
 #AUTH_PROFILE_MODULE = 'Profile.Profiles'
 STATIC_URL = '/static/'
-<<<<<<< HEAD
+
 STATIC_ROOT = "C:\inetpub\wwwroot\App_Caae_Estadisticas/app\static"
 
-=======
-STATIC_ROOT = join(PROJECT_ROOT, 'static')
+
+
 MEDIA_ROOT = join(PROJECT_ROOT, 'reportes')
 MEDIA_URL = '/reportes/'
->>>>>>> master
+
 
 LOGIN_REDIRECT_URL = '/'
 
