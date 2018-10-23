@@ -10,13 +10,11 @@ body {
 }
 
 .contenedor{
-    width: 100%; 
+    width: 100%;
     position:relative; 
 }
 
-.contenedor #header{
-    margin-top: -1.6%;
-}
+
 
 .ruta {
     font-weight: 10%;
