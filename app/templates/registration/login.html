@@ -1,39 +1,49 @@
-{% extends 'registration/base_login.html' %}
 {% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="icon" href="{% static 'img/RC.png' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-{% block content %}
-    <table class="container">
-    <div class="error">{% if form.errors %}
-        <p>Tu usuario y contraseña no coinciden. Porfavor intenta de nuevo.</p>
-    {% endif %}
-    </div>
-    </table>
-    <div>
-    <form method="post" class="form-signin" action="{% url 'login' %}">
-    {% csrf_token %}
-        
-        <div >
-            <img align="center" class="col-ms-4" src="{% static 'img/Logo CAAE.png' %}" alt="" width="350" height="150">
-       
-        <h2 class="h3 mb-3 font-weight-normal"><a class="alert-link">Ingresa a tu cuenta</a></h2>
-            <table class="table-control">
-            <tr>
+</head>
+<body class="text-center">
+	
+	    <form class="form-signin" method="post" action="{% url 'login' %}">
+                {% csrf_token %}
                 
-                <td>{{ form.username.label_tag }}</td>
-                <td>{{ form.username }}</td>
-               
-            </tr>
-            <tr>
-                <td>{{ form.password.label_tag }}</td>
-                <td>{{ form.password }}</td>
-            </tr>
-            </table>
+                    <img class="mb-4" src="{% static 'img/Logo CAAE.png' %}" alt="" width="350" height="150">
+                      
+                      <label for="id_username" class="sr-only">Usuario</label>
+                      <input type="text" id="id_username" name="username" class="form-control" placeholder="Usuario" required autofocus>
+                      <label for="id_password" class="sr-only">Contraseña</label>
+                      <input type="password" id="id_password" class="form-control" name="password" placeholder="Contraseña" required>
+                {% if form.errors %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    	
+					  <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+					  </button>
+					   Su usuario y contraseña no coinciden. 
+                        Por favor intenta de nuevo.
+					</div>
+                {% endif %}
+                <button style="margin-top: 10%;" class="btn  btn-primary btn-block" type="submit" >Ingresar</button>
+                <input type="hidden" name="next" value="{% url 'home' %}" />
+                <p class="mt-5 mb-3 text-muted">&copy; CAAE 2018</p> 
+	                
+ 
+</body>
 
-            <input class="btn btn-primary " type="submit" value="Ingresa" /> 
-            <input type="hidden" name="next" value="{% url 'home' %}" />
-            <p class="mt-5 mb-3 text-muted">&copy; CAAE 2018</p> 
-         </div>   
-    </form>
-    </div>  
+</html>
 
-{% endblock %}
+
+   

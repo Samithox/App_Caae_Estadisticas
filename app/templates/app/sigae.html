@@ -31,8 +31,16 @@
                             </div> 
                                  <div id="collapse11" class="collapse" data-parent="#accordion11">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Universidad.pdf' %}" target="_blank">
-                                            - Universidad Adventista de Chile</a>
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2015 %}
+                                                {% if report.reporte_Departamento == "UNACH" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}
                                     </div>
                                  </div>  
                             <div class="card-header">
@@ -40,8 +48,16 @@
                             </div> 
                                  <div id="collapse12" class="collapse" data-parent="#accordion11">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Universidad.pdf' %}" target="_blank">
-                                       - Universidad Adventista de Chile</a>
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2016 %}
+                                                {% if report.reporte_Departamento == "UNACH" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}
                                     </div>
                                  </div>
                             <div class="card-header">
@@ -49,8 +65,16 @@
                             </div> 
                                  <div id="collapse13" class="collapse" data-parent="#accordion11">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Universidad.pdf' %}" target="_blank">
-                                       - Universidad Adventista de Chile</a>
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2017 %}
+                                                {% if report.reporte_Departamento == "UNACH" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}
                                     </div>
                                  </div>
                             <div class="card-header">
@@ -58,8 +82,16 @@
                             </div> 
                                  <div id="collapse14" class="collapse" data-parent="#accordion11">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Universidad.pdf' %}" target="_blank">
-                                       - Universidad Adventista de Chile</a>
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2018 %}
+                                                {% if report.reporte_Departamento == "UNACH" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}
                                     </div>
                                  </div>     
                         </div>
@@ -79,14 +111,16 @@
                             </div> 
                                  <div id="collapse21" class="collapse" data-parent="#accordion21">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_FACS.pdf' %}" target="_blank">
-                                            - Facultad de Ciencias de la salud</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_FECS.pdf' %}" target="_blank">
-                                            - Facultad de Educación y Ciencias Sociales</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_FAIN.pdf' %}" target="_blank">
-                                            - Facultad de Ingeniería y Negocios</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_FTEO.pdf' %}" target="_blank">
-                                            - Facultad de Teología</a>            
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2015 %}
+                                                {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FTEO"  %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}           
                                     </div>
                                  </div>  
                             <div class="card-header">
@@ -94,14 +128,16 @@
                             </div> 
                                  <div id="collapse22" class="collapse" data-parent="#accordion21">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_FACS.pdf' %}" target="_blank">
-                                            - Facultad de Ciencias de la salud</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_FECS.pdf' %}" target="_blank">
-                                            - Facultad de Educación y Ciencias Sociales</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_FAIN.pdf' %}" target="_blank">
-                                            - Facultad de Ingeniería y Negocios</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_FTEO.pdf' %}" target="_blank">
-                                            - Facultad de Teología</a>            
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2016 %}
+                                                {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FTEO"  %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}            
                                     </div>
                                  </div>  
                             <div class="card-header">
@@ -109,14 +145,16 @@
                             </div> 
                                  <div id="collapse23" class="collapse" data-parent="#accordion21">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_FACS.pdf' %}" target="_blank">
-                                            - Facultad de Ciencias de la salud</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_FECS.pdf' %}" target="_blank">
-                                            - Facultad de Educación y Ciencias Sociales</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_FAIN.pdf' %}" target="_blank">
-                                            - Facultad de Ingeniería y Negocios</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_FTEO.pdf' %}" target="_blank">
-                                            - Facultad de Teología</a>            
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2017 %}
+                                                {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FTEO"  %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}            
                                     </div>
                                  </div>  
                             <div class="card-header">
@@ -124,14 +162,16 @@
                             </div> 
                                  <div id="collapse24" class="collapse" data-parent="#accordion21">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_FACS.pdf' %}" target="_blank">
-                                            - Facultad de Ciencias de la salud</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_FECS.pdf' %}" target="_blank">
-                                            - Facultad de Educación y Ciencias Sociales</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_FAIN.pdf' %}" target="_blank">
-                                            - Facultad de Ingeniería y Negocios</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_FTEO.pdf' %}" target="_blank">
-                                            - Facultad de Teología</a>            
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2018 %}
+                                                {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FTEO"  %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}            
                                     </div>
                                  </div>                 
                         </div>
@@ -151,50 +191,16 @@
                             </div> 
                                  <div id="collapse31" class="collapse" data-parent="#accordion31">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Agronomia.pdf' %}" target="_blank">
-                                            - Agronomía</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Contador_Auditor.pdf' %}" target="_blank">
-                                            - Contador Auditor</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ed_Parvularia.pdf' %}" target="_blank">
-                                            - Ed. Parvularia</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Enfermeria.pdf' %}" target="_blank">
-                                            - Enfermería</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ing_Civil_Industrial.pdf' %}" target="_blank">
-                                            - Ing. Civil Industria</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ing_Civil_Informatica.pdf' %}" target="_blank">
-                                            - Ing. Civil Informática</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ing_Comercial.pdf' %}" target="_blank">
-                                            - Ing. Comercial</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ing_Electronica_Telecomunicaciones.pdf' %}" target="_blank">
-                                            - Ing. Electrónica y Telecomunicaciónes</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Nutricion.pdf' %}" target="_blank">
-                                            - Nutrición</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Obstetricia.pdf' %}" target="_blank">
-                                            - Obstetricia y Opicultura</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ped_Ed_Diferencial.pdf' %}" target="_blank">
-                                            - Ped. Ed. Diferencial</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ped_Ed_Física.pdf' %}" target="_blank">
-                                            - Ped. Ed. Física</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ped_Ed_General_Basica.pdf' %}" target="_blank">
-                                            - Ped. Ed. General Básica</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ped_Historia.pdf' %}" target="_blank">
-                                            - Ped. Historia</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ped_Inglés.pdf' %}" target="_blank">
-                                            - Ped. Inglés</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ped_Lenguaje.pdf' %}" target="_blank">
-                                            - Ped. Lenguaje</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ped_Matematica.pdf' %}" target="_blank">
-                                            - Ped. Matemática</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Ped_Música.pdf' %}" target="_blank">
-                                            - Ped. Música</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Psicología.pdf' %}" target="_blank">
-                                            - Psicología</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Teología.pdf' %}" target="_blank">
-                                            - Teología</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_TNS_Enfermeria.pdf' %}" target="_blank">
-                                            - TNS Enfermeía</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2015_sigae_Trabajo_Social.pdf' %}" target="_blank">
-                                            - Trabajo Social</a>                                                                                    
+                                       {% for report in reports %}
+                                            {% if report.ano_reporte == 2015 %}
+                                                {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}                                                                                    
                                     </div>
                                  </div>
                             <div class="card-header">
@@ -202,50 +208,16 @@
                             </div> 
                                  <div id="collapse32" class="collapse" data-parent="#accordion31">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Agronomia.pdf' %}" target="_blank">
-                                            - Agronomía</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Contador_Auditor.pdf' %}" target="_blank">
-                                            - Contador Auditor</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ed_Parvularia.pdf' %}" target="_blank">
-                                            - Ed. Parvularia</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Enfermeria.pdf' %}" target="_blank">
-                                            - Enfermería</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ing_Civil_Industrial.pdf' %}" target="_blank">
-                                            - Ing. Civil Industria</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ing_Civil_Informatica.pdf' %}" target="_blank">
-                                            - Ing. Civil Informática</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ing_Comercial.pdf' %}" target="_blank">
-                                            - Ing. Comercial</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ing_Electronica_Telecomunicaciones.pdf' %}" target="_blank">
-                                            - Ing. Electrónica y Telecomunicaciónes</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Nutricion.pdf' %}" target="_blank">
-                                            - Nutrición</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Obstetricia.pdf' %}" target="_blank">
-                                            - Obstetricia y Opicultura</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ped_Ed_Diferencial.pdf' %}" target="_blank">
-                                            - Ped. Ed. Diferencial</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ped_Ed_Física.pdf' %}" target="_blank">
-                                            - Ped. Ed. Física</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ped_Ed_General_Basica.pdf' %}" target="_blank">
-                                            - Ped. Ed. General Básica</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ped_Historia.pdf' %}" target="_blank">
-                                            - Ped. Historia</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ped_Inglés.pdf' %}" target="_blank">
-                                            - Ped. Inglés</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ped_Lenguaje.pdf' %}" target="_blank">
-                                            - Ped. Lenguaje</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ped_Matematica.pdf' %}" target="_blank">
-                                            - Ped. Matemática</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Ped_Música.pdf' %}" target="_blank">
-                                            - Ped. Música</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Psicología.pdf' %}" target="_blank">
-                                            - Psicología</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Teología.pdf' %}" target="_blank">
-                                            - Teología</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_TNS_Enfermeria.pdf' %}" target="_blank">
-                                            - TNS Enfermeía</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2016_sigae_Trabajo_Social.pdf' %}" target="_blank">
-                                            - Trabajo Social</a>                                                                                    
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2016 %}
+                                                {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}                                                                                    
                                     </div>
                                  </div>       
                             <div class="card-header">
@@ -253,50 +225,16 @@
                             </div> 
                                  <div id="collapse33" class="collapse" data-parent="#accordion31">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Agronomia.pdf' %}" target="_blank">
-                                            - Agronomía</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Contador_Auditor.pdf' %}" target="_blank">
-                                            - Contador Auditor</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ed_Parvularia.pdf' %}" target="_blank">
-                                            - Ed. Parvularia</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Enfermeria.pdf' %}" target="_blank">
-                                            - Enfermería</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ing_Civil_Industrial.pdf' %}" target="_blank">
-                                            - Ing. Civil Industria</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ing_Civil_Informatica.pdf' %}" target="_blank">
-                                            - Ing. Civil Informática</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ing_Comercial.pdf' %}" target="_blank">
-                                            - Ing. Comercial</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ing_Electronica_Telecomunicaciones.pdf' %}" target="_blank">
-                                            - Ing. Electrónica y Telecomunicaciónes</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Nutricion.pdf' %}" target="_blank">
-                                            - Nutrición</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Obstetricia.pdf' %}" target="_blank">
-                                            - Obstetricia y Opicultura</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ped_Ed_Diferencial.pdf' %}" target="_blank">
-                                            - Ped. Ed. Diferencial</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ped_Ed_Física.pdf' %}" target="_blank">
-                                            - Ped. Ed. Física</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ped_Ed_General_Basica.pdf' %}" target="_blank">
-                                            - Ped. Ed. General Básica</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ped_Historia.pdf' %}" target="_blank">
-                                            - Ped. Historia</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ped_Inglés.pdf' %}" target="_blank">
-                                            - Ped. Inglés</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ped_Lenguaje.pdf' %}" target="_blank">
-                                            - Ped. Lenguaje</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ped_Matematica.pdf' %}" target="_blank">
-                                            - Ped. Matemática</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Ped_Música.pdf' %}" target="_blank">
-                                            - Ped. Música</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Psicología.pdf' %}" target="_blank">
-                                            - Psicología</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Teología.pdf' %}" target="_blank">
-                                            - Teología</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_TNS_Enfermeria.pdf' %}" target="_blank">
-                                            - TNS Enfermeía</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2017_sigae_Trabajo_Social.pdf' %}" target="_blank">
-                                            - Trabajo Social</a>                                                                                    
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2017 %}
+                                                {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}                                                                                    
                                     </div>
                                  </div>
                             <div class="card-header">
@@ -304,50 +242,16 @@
                             </div> 
                                  <div id="collapse34" class="collapse" data-parent="#accordion31">
                                     <div class="card-body">
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Agronomia.pdf' %}" target="_blank">
-                                            - Agronomía</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Contador_Auditor.pdf' %}" target="_blank">
-                                            - Contador Auditor</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ed_Parvularia.pdf' %}" target="_blank">
-                                            - Ed. Parvularia</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Enfermeria.pdf' %}" target="_blank">
-                                            - Enfermería</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ing_Civil_Industrial.pdf' %}" target="_blank">
-                                            - Ing. Civil Industria</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ing_Civil_Informatica.pdf' %}" target="_blank">
-                                            - Ing. Civil Informática</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ing_Comercial.pdf' %}" target="_blank">
-                                            - Ing. Comercial</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ing_Electronica_Telecomunicaciones.pdf' %}" target="_blank">
-                                            - Ing. Electrónica y Telecomunicaciónes</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Nutricion.pdf' %}" target="_blank">
-                                            - Nutrición</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Obstetricia.pdf' %}" target="_blank">
-                                            - Obstetricia y Opicultura</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ped_Ed_Diferencial.pdf' %}" target="_blank">
-                                            - Ped. Ed. Diferencial</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ped_Ed_Física.pdf' %}" target="_blank">
-                                            - Ped. Ed. Física</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ped_Ed_General_Basica.pdf' %}" target="_blank">
-                                            - Ped. Ed. General Básica</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ped_Historia.pdf' %}" target="_blank">
-                                            - Ped. Historia</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ped_Inglés.pdf' %}" target="_blank">
-                                            - Ped. Inglés</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ped_Lenguaje.pdf' %}" target="_blank">
-                                            - Ped. Lenguaje</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ped_Matematica.pdf' %}" target="_blank">
-                                            - Ped. Matemática</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Ped_Música.pdf' %}" target="_blank">
-                                            - Ped. Música</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Psicología.pdf' %}" target="_blank">
-                                            - Psicología</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Teología.pdf' %}" target="_blank">
-                                            - Teología</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_TNS_Enfermeria.pdf' %}" target="_blank">
-                                            - TNS Enfermeía</a>
-                                        <a style="margin-left: 20%;" class="list-group" href="{% static 'reports/sigae/2018_sigae_Trabajo_Social.pdf' %}" target="_blank">
-                                            - Trabajo Social</a>                                                                                    
+                                        {% for report in reports %}
+                                            {% if report.ano_reporte == 2018 %}
+                                                {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                
+                                                {% endif %}      
+                                            {% endif %}
+                                        {% endfor %}                                                                                    
                                     </div>
                                  </div>     
                         </div>
@@ -355,7 +259,7 @@
                 </div>  
             </div>
         </div>
-        {% include 'app/logoCAAE.html' %}
+        {% include 'partials/logoCAAE.html' %}
     </div>
 </section>
 
