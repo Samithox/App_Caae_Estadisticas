@@ -34,6 +34,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+reportes/
 env/
 build/
 develop-eggs/
@@ -45,6 +46,7 @@ lib64/
 parts/
 sdist/
 var/
+reportes/
 *.egg-info/
 .installed.cfg
 *.egg

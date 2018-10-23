@@ -30,6 +30,7 @@ SECRET_KEY = '+#&#&cntj)ql_7&7$(2wn4!ltvd+@-pdbm#+g6df92%2#7f!e='
 # Application definition
 
 INSTALLED_APPS = (
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,6 +50,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+
+
 ROOT_URLCONF = 'Caae_Estadisticas.urls'
 
 WSGI_APPLICATION = 'Caae_Estadisticas.wsgi.application'
@@ -62,7 +65,7 @@ WSGI_APPLICATION = 'Caae_Estadisticas.wsgi.application'
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'America/Santiago'
 
@@ -90,10 +93,16 @@ TEMPLATES = [
     },
 ]
 
-
+#AUTH_PROFILE_MODULE = 'Profile.Profiles'
 STATIC_URL = '/static/'
+<<<<<<< HEAD
 STATIC_ROOT = "C:\inetpub\wwwroot\App_Caae_Estadisticas/app\static"
 
+=======
+STATIC_ROOT = join(PROJECT_ROOT, 'static')
+MEDIA_ROOT = join(PROJECT_ROOT, 'reportes')
+MEDIA_URL = '/reportes/'
+>>>>>>> master
 
 LOGIN_REDIRECT_URL = '/'
 
