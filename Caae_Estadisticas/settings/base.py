@@ -100,7 +100,7 @@ STATIC_ROOT = "C:\inetpub\wwwroot\App_Caae_Estadisticas/app\static"
 
 
 
-MEDIA_ROOT = join(PROJECT_ROOT, 'reportes')
+MEDIA_ROOT = "C:\inetpub\wwwroot\App_Caae_Estadisticas/reportes"
 MEDIA_URL = '/reportes/'
 
 
