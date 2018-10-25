@@ -30,7 +30,7 @@ SECRET_KEY = '+#&#&cntj)ql_7&7$(2wn4!ltvd+@-pdbm#+g6df92%2#7f!e='
 # Application definition
 
 INSTALLED_APPS = (
-    'django_admin_bootstrapped',
+    #'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

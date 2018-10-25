@@ -1,7 +1,28 @@
 {% load staticfiles %}
-
+ 
 <div class="col-sm-6 col-lg-6">
     <div align="center" class="logouniversidad">
-        <img class="mb-2" src="{% static 'img/Logo CAAE.png' %}" alt="" width="90%" height="40%">
+        <table class="table table-striped table-dark">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">Rut</th>
+		      <th scope="col">Nombre</th>
+		      <th scope="col">Email</th>
+		      <th scope="col">Telefono</th>
+		      <th scope="col">Tipo Reserva</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	{% for cliente in clientes %}
+			<tr>
+		      <td>{{cliente.rut_Cliente}}</td>
+		      <td>{{cliente.nombre_Cliente}}</td>
+		      <td>{{cliente.email_Cliente}}</td>
+		      <td>{{cliente.telefono_Cliente}}</td>
+		      <td>{{cliente.tipo_Reserva}}</td>
+		    </tr>
+		    {% endfor %}
+		  </tbody>
+		</table>
     </div>
 </div>
