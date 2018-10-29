@@ -184,6 +184,13 @@ class Profile(models.Model):
         (NIVEL_3,'3'),
         )
     permiso = models.CharField(max_length=1,choices=PERMISO_CHOICE,blank=True)
+    MASCULINO = 'M'
+    FEMENINO = 'F'
+    SEXO_CHOICE = (
+        (MASCULINO,'Masculino'),
+        (FEMENINO,'Femenino'),
+        )
+    sexo = models.CharField(max_length=1,choices=SEXO_CHOICE,blank=True) 
 
     USERNAME_FIELD = 'user'
     REQUIRED_FIELDS = ('facultad','carrera','tipo_Usuario','permiso')
