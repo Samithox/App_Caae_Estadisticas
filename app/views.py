@@ -136,7 +136,7 @@ def kolb(request):
 		elif request.user.profile.carrera == 'TRAB_SOC':
 			reports = Report.objects.filter(reporte_Departamento__in=['FAIN','UNACH','TRAB_SOC'], tipo_reporte='Kolb').order_by('nombre')   
 	elif request.user.profile.permiso == '1':
-		reports = Report.objects.filter(tipo_reporte='Autoreporte').order_by('nombre')
+		reports = Report.objects.filter(tipo_reporte='Kolb').order_by('nombre')
 	else: 
 		reports = Report.objects.none()
 	return render(request, 'app/kolb.html',{'reports': reports})
@@ -200,7 +200,7 @@ def edward(request):
 		elif request.user.profile.carrera == 'TRAB_SOC':
 			reports = Report.objects.filter(reporte_Departamento__in=['FAIN','UNACH','TRAB_SOC'], tipo_reporte='Edward').order_by('nombre')
 	elif request.user.profile.permiso == '1':
-		reports = Report.objects.filter(tipo_reporte='Autoreporte').order_by('nombre')
+		reports = Report.objects.filter(tipo_reporte='Edward').order_by('nombre')
 	else: 
 		reports = Report.objects.none()
 	return render(request, 'app/edward.html',{'reports': reports})
@@ -264,7 +264,7 @@ def tap(request):
 		elif request.user.profile.carrera == 'TRAB_SOC':
 			reports = Report.objects.filter(reporte_Departamento__in=['FAIN','UNACH','TRAB_SOC'], tipo_reporte='Taller de Habilidades').order_by('nombre')
 	elif request.user.profile.permiso == '1':
-		reports = Report.objects.filter(tipo_reporte='Autoreporte').order_by('nombre')
+		reports = Report.objects.filter(tipo_reporte='Taller de Habilidades').order_by('nombre')
 	else: 
 		reports = Report.objects.none()
 	return render(request, 'app/tap.html',{'reports': reports}) 
@@ -328,7 +328,7 @@ def sigae(request):
 		elif request.user.profile.carrera == 'TRAB_SOC':
 			reports = Report.objects.filter(reporte_Departamento__in=['FAIN','UNACH','TRAB_SOC'], tipo_reporte='Sigae').order_by('nombre')
 	elif request.user.profile.permiso == '1':
-		reports = Report.objects.filter(tipo_reporte='Autoreporte').order_by('nombre')
+		reports = Report.objects.filter(tipo_reporte='Sigae').order_by('nombre')
 	else: 
 		reports = Report.objects.none()
 	return render(request, 'app/sigae.html',{'reports': reports})               
@@ -392,7 +392,7 @@ def propedeutico(request):
 		elif request.user.profile.carrera == 'TRAB_SOC':
 			reports = Report.objects.filter(reporte_Departamento__in=['FAIN','UNACH','TRAB_SOC'], tipo_reporte='Propedeutico').order_by('nombre')
 	elif request.user.profile.permiso == '1':
-		reports = Report.objects.filter(tipo_reporte='Autoreporte').order_by('nombre')
+		reports = Report.objects.filter(tipo_reporte='Propedeutico').order_by('nombre')
 	else: 
 		reports = Report.objects.none()
 	return render(request, 'app/propedeutico.html',{'reports': reports})
@@ -456,7 +456,7 @@ def honeyalonso(request):
 		elif request.user.profile.carrera == 'TRAB_SOC':
 			reports = Report.objects.filter(reporte_Departamento__in=['FAIN','UNACH','TRAB_SOC'], tipo_reporte='Honey Alonso').order_by('nombre')
 	elif request.user.profile.permiso == '1':
-		reports = Report.objects.filter(tipo_reporte='Autoreporte').order_by('nombre')
+		reports = Report.objects.filter(tipo_reporte='Honey Alonso').order_by('nombre')
 	else: 
 		reports = Report.objects.none()
 	return render(request, 'app/honeyalonso.html',{'reports': reports})
@@ -520,7 +520,7 @@ def tutores(request):
 		elif request.user.profile.carrera == 'TRAB_SOC':
 			reports = Report.objects.filter(reporte_Departamento__in=['FAIN','UNACH','TRAB_SOC'], tipo_reporte='Tutores').order_by('nombre')
 	elif request.user.profile.permiso == '1':
-		reports = Report.objects.filter(tipo_reporte='Autoreporte').order_by('nombre')
+		reports = Report.objects.filter(tipo_reporte='Tutores').order_by('nombre')
 	else: 
 		reports = Report.objects.none()
 	return render(request, 'app/tutores.html',{'reports': reports})
@@ -584,7 +584,7 @@ def ayudantias(request):
 		elif request.user.profile.carrera == 'TRAB_SOC':
 			reports = Report.objects.filter(reporte_Departamento__in=['FAIN','UNACH','TRAB_SOC'], tipo_reporte='Ayudantias').order_by('nombre')
 	elif request.user.profile.permiso == '1':
-		reports = Report.objects.filter(tipo_reporte='Autoreporte').order_by('nombre')
+		reports = Report.objects.filter(tipo_reporte='Ayudantias').order_by('nombre')
 	else: 
 		reports = Report.objects.none()
 	return render(request, 'app/ayudantias.html',{'reports': reports})
