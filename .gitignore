@@ -35,6 +35,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 reportes/
+app/migrations
 env/
 build/
 develop-eggs/
