@@ -1,5 +1,5 @@
-# Reportes Caae
-App de prueba de reportes estadísticos para el área del Caae
+# App Reportes
+Sistema de reportes estadísticos
 ## Objetivo
 Compartir reportes dentro de una organización.
 
