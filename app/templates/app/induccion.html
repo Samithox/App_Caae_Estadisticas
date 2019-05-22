@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+<!--{% load staticfiles %}-->
+{% block content %}
+
+<nav class="ruta" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <i class="fas fa-home"></i>
+            <a href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Inducción</li>
+    </ol>
+</nav>
+<div class="container">
+    <h4>
+        <i class="fas fa-angle-double-right"></i> Tenemos los siguientes reportes:</h4>
+</div>
+<section class="container-fluid">
+    <div class="row">
+        {% include 'partials/documentos.html' %}
+        {% include 'partials/logoCAAE.html' %}
+    </div>
+</section>
+
+
+
+{% endblock %}
