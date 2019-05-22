@@ -14,4 +14,5 @@ urlpatterns = [
     url(r'^home/reports/honeyalonso$', views.honeyalonso, name='honeyalonso'),
     url(r'^home/reports/tutores$', views.tutores, name='tutores'),
     url(r'^home/reports/ayudantias$', views.ayudantias, name='ayudantias'),
+    url(r'^home/reports/induccion$', views.induccion, name='induccion'),
     ]

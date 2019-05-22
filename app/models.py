@@ -15,6 +15,7 @@ class Report(models.Model):
     HONEY_ALONSO = 'Honey_Alonso'
     TUTORES = 'Tutores'
     AYUDANTIAS = 'Ayudantias'
+    INDUCCION = 'Induccion'
     TIPO_REPORTE_CHOICES = (
         (AUTOREPORTE,'Autoreporte'),
         (SIGAE,'Sigae'),
@@ -25,6 +26,7 @@ class Report(models.Model):
         (HONEY_ALONSO,'Honey Alonso'),
         (TUTORES,'Tutores'),
         (AYUDANTIAS,'Ayudantias'),
+        (INDUCCION,'Induccion'),
         )
     tipo_reporte = models.CharField(max_length=30,choices=TIPO_REPORTE_CHOICES,blank=True)
     FACULTAD_DE_EDUCACION = 'FECS'
