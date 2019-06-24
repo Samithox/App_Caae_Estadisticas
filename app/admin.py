@@ -4,7 +4,7 @@ from .models import Report, Profile
 admin.site.site_header = 'Administracion de Reportes CAAE'
 
 class ReportAdmin(admin.ModelAdmin):
-	list_filter = ('ano_reporte','tipo_reporte',)
+	list_filter = ('ano_reporte','tipo_reporte','reporte_Departamento',)
 	list_display = ('tipo_reporte','nombre','reporte_Departamento',)
 		
 
