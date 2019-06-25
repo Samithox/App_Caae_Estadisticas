@@ -15,12 +15,11 @@
                                             {% for report in reports %}
                                                 {% if report.ano_reporte == 2015 %}
                                                     {% if report.reporte_Departamento == "UNACH" %}
-                                                        {% if reports %} 
                                                             <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
                                                                 - {{report.nombre}}</a>
-                                                        {% else %}
+                                                    {% else %}
                                                             <p style="margin-left: 20%;" class="list-group"> - No se tienen registros de este año para mostrar</p>
-                                                        {% endif %} 
+                                                         
                                                     {% endif %}      
                                                 {% endif %}
                                             {% endfor %}      
@@ -40,8 +39,10 @@
                                                     
                                                         <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
                                                             - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
+                                                    {% else %}
+                                                            <p style="margin-left: 20%;" class="list-group"> - No se tienen registros de este año para mostrar</p>
+                                                         
+                                                    {% endif %}        
                                                 {% endif %}
                                             {% endfor %}  
                                         {% endif %} 
@@ -61,8 +62,10 @@
                                                     
                                                         <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
                                                             - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
+                                                    {% else %}
+                                                            <p style="margin-left: 20%;" class="list-group"> - No se tienen registros de este año para mostrar</p>
+                                                         
+                                                    {% endif %}        
                                                 {% endif %}
                                             {% endfor %}  
                                         {% endif %}   
@@ -82,8 +85,10 @@
                                                     
                                                         <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
                                                             - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
+                                                    {% else %}
+                                                            <p style="margin-left: 20%;" class="list-group"> - No se tienen registros de este año para mostrar</p>
+                                                         
+                                                    {% endif %}        
                                                 {% endif %}
                                             {% endfor %}  
                                         {% endif %}   
@@ -103,7 +108,9 @@
                                                     
                                                         <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
                                                             - {{report.nombre}}</a>
-                                                    
+                                                    {% else %}
+                                                            <p style="margin-left: 20%;" class="list-group"> - No se tienen registros de este año para mostrar</p>
+                                                         
                                                     {% endif %}      
                                                 {% endif %}
                                             {% endfor %}  
