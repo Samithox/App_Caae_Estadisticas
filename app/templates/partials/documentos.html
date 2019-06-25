@@ -12,14 +12,21 @@
                             </div> 
                                  <div id="collapse11" class="collapse" data-parent="#accordion11">
                                     <div class="card-body">
-                                            {% for report in reports %}
-                                                {% if report.ano_reporte == 2015 %}
-                                                    {% if report.reporte_Departamento == "UNACH" %}
-                                                            <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                                - {{report.nombre}}</a>
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}      
+                                        {% if report.ano_reporte == 2015 %}
+                                            {% if report.reporte_Departamento == "UNACH" %}
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>  
                             <div class="card-header">
@@ -27,15 +34,21 @@
                             </div> 
                                  <div id="collapse12" class="collapse" data-parent="#accordion11">
                                     <div class="card-body">
-                                            {% for report in reports %}
-                                                {% if report.ano_reporte == 2016 %}
-                                                    {% if report.reporte_Departamento == "UNACH" %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    {% endif %}        
-                                                {% endif %}
-                                            {% endfor %}
+                                        {% if report.ano_reporte == 2016 %}
+                                            {% if report.reporte_Departamento == "UNACH" %}
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>
                             <div class="card-header">
@@ -43,15 +56,21 @@
                             </div> 
                                  <div id="collapse13" class="collapse" data-parent="#accordion11">
                                     <div class="card-body">
-                                            {% for report in reports %}
-                                                {% if report.ano_reporte == 2017 %}
-                                                    {% if report.reporte_Departamento == "UNACH" %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    {% endif %}        
-                                                {% endif %}
-                                            {% endfor %}  
+                                        {% if report.ano_reporte == 2017 %}
+                                            {% if report.reporte_Departamento == "UNACH" %}
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>
                             <div class="card-header">
@@ -59,15 +78,21 @@
                             </div> 
                                  <div id="collapse14" class="collapse" data-parent="#accordion11">
                                     <div class="card-body">
-                                            {% for report in reports %}
-                                                {% if report.ano_reporte == 2018 %}
-                                                    {% if report.reporte_Departamento == "UNACH" %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    {% endif %}        
-                                                {% endif %}
-                                            {% endfor %}  
+                                        {% if report.ano_reporte == 2018 %}
+                                            {% if report.reporte_Departamento == "UNACH" %}
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>
                             <div class="card-header">
@@ -75,15 +100,21 @@
                             </div> 
                                  <div id="collapse15" class="collapse" data-parent="#accordion11">
                                     <div class="card-body">
-                                            {% for report in reports %}
-                                                {% if report.ano_reporte == 2019 %}
-                                                    {% if report.reporte_Departamento == "UNACH" %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}  
+                                        {% if report.ano_reporte == 2019 %}
+                                            {% if report.reporte_Departamento == "UNACH" %}
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                        - {{report.nombre}}</a>
+                                                {% empty %}
+                                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                        <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                            No se tienen registros de este año para mostrar
+                                                    </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>            
                         </div>
@@ -103,16 +134,21 @@
                             </div> 
                                  <div id="collapse21" class="collapse" data-parent="#accordion21">
                                     <div class="card-body">
-                                            {% for report in reports %}
-                                                {% if report.ano_reporte == 2015 %}
-                                                    {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FECS" or report.reporte_Departamento == "FTEO"  %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}              
+                                        {% if report.ano_reporte == 2015 %}
+                                            {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FECS" or report.reporte_Departamento == "FTEO"  %}    
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                                - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>  
                             <div class="card-header">
@@ -120,16 +156,21 @@
                             </div> 
                                  <div id="collapse22" class="collapse" data-parent="#accordion21">
                                     <div class="card-body">
-                                            {% for report in reports %}
-                                                {% if report.ano_reporte == 2016 %}
-                                                    {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FECS" or report.reporte_Departamento == "FTEO"  %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}             
+                                        {% if report.ano_reporte == 2016 %}
+                                            {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FECS" or report.reporte_Departamento == "FTEO"  %}    
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                                - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>  
                             <div class="card-header">
@@ -137,16 +178,21 @@
                             </div> 
                                  <div id="collapse23" class="collapse" data-parent="#accordion21">
                                     <div class="card-body">
-                                            {% for report in reports %}
-                                                {% if report.ano_reporte == 2017 %}
-                                                    {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FECS" or report.reporte_Departamento == "FTEO"  %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}        
+                                        {% if report.ano_reporte == 2017 %}
+                                            {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FECS" or report.reporte_Departamento == "FTEO"  %}    
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                                - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>  
                             <div class="card-header">
@@ -154,33 +200,43 @@
                             </div> 
                                  <div id="collapse24" class="collapse" data-parent="#accordion21">
                                     <div class="card-body">
-                                            {% for report in reports %}
-                                                {% if report.ano_reporte == 2018 %}
-                                                    {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FECS" or report.reporte_Departamento == "FTEO"  %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}           
-                                    </div>
+                                        {% if report.ano_reporte == 2018 %}
+                                            {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FECS" or report.reporte_Departamento == "FTEO"  %}    
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                                - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %
+                                        </div>
                                  </div>
                             <div class="card-header">
                                 <a class="card-link" data-toggle="collapse" href="#collapse25" ><h4 style="margin-left: 10%;"><i class="fas fa-caret-right"></i> 2019</a></h4>
                             </div> 
                                  <div id="collapse25" class="collapse" data-parent="#accordion21">
                                     <div class="card-body">
-                                            {% for report in reports %}
-                                                {% if report.ano_reporte == 2019 %}
-                                                    {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FECS" or report.reporte_Departamento == "FTEO"  %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}            
+                                        {% if report.ano_reporte == 2019 %}
+                                            {% if report.reporte_Departamento == "FACS" or report.reporte_Departamento == "FAIN" or report.reporte_Departamento == "FECS" or report.reporte_Departamento == "FTEO"  %}    
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                                - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>                      
                         </div>
@@ -200,16 +256,21 @@
                             </div> 
                                  <div id="collapse31" class="collapse" data-parent="#accordion31">
                                     <div class="card-body">
-                                           {% for report in reports %}
-                                                {% if report.ano_reporte == 2015 %}
-                                                    {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}                                                                                      
+                                        {% if report.ano_reporte == 2015 %}
+                                            {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                                - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>
                             <div class="card-header">
@@ -217,16 +278,21 @@
                             </div> 
                                  <div id="collapse32" class="collapse" data-parent="#accordion31">
                                     <div class="card-body">
-                                           {% for report in reports %}
-                                                {% if report.ano_reporte == 2016 %}
-                                                    {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}                                                                             
+                                        {% if report.ano_reporte == 2016 %}
+                                            {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                                - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>       
                             <div class="card-header">
@@ -234,16 +300,21 @@
                             </div> 
                                  <div id="collapse33" class="collapse" data-parent="#accordion31">
                                     <div class="card-body">
-                                           {% for report in reports %}
-                                                {% if report.ano_reporte == 2017 %}
-                                                    {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}                                                                             
+                                        {% if report.ano_reporte == 2017 %}
+                                            {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                                - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>
                             <div class="card-header">
@@ -251,16 +322,21 @@
                             </div> 
                                  <div id="collapse34" class="collapse" data-parent="#accordion31">
                                     <div class="card-body">
-                                           {% for report in reports %}
-                                                {% if report.ano_reporte == 2018 %}
-                                                    {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}                                                                               
+                                        {% if report.ano_reporte == 2018 %}
+                                            {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                                - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %}
                                     </div>
                                  </div>
                             <div class="card-header">
@@ -268,17 +344,22 @@
                             </div> 
                                  <div id="collapse35" class="collapse" data-parent="#accordion31">
                                     <div class="card-body">
-                                           {% for report in reports %}
-                                                {% if report.ano_reporte == 2019 %}
-                                                    {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
-                                                    
-                                                        <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
-                                                            - {{report.nombre}}</a>
-                                                    
-                                                    {% endif %}      
-                                                {% endif %}
-                                            {% endfor %}                                                                                    
-                                    </div>
+                                        {% if report.ano_reporte == 2019 %}
+                                            {% if report.reporte_Departamento == "AGRO" or report.reporte_Departamento == "CON_AUD" or report.reporte_Departamento == "ED_PARV" or report.reporte_Departamento == "ENF" or report.reporte_Departamento == "ING_CIV_INF" or report.reporte_Departamento == "ING_INF" or report.reporte_Departamento == "ING_COM" or report.reporte_Departamento == "ING_ELEC" or report.reporte_Departamento == "ING_CIV_IND" or report.reporte_Departamento == "NUT" or report.reporte_Departamento == "OBS" or report.reporte_Departamento == "PED_ED_DIF" or report.reporte_Departamento == "PED_ED_FIS" or report.reporte_Departamento == "PED_BIO" or report.reporte_Departamento == "PED_ED_GEN_BAS" or report.reporte_Departamento == "PED_HIS" or report.reporte_Departamento == "PED_ING" or report.reporte_Departamento == "PED_LENG" or report.reporte_Departamento == "PED_MAT" or report.reporte_Departamento == "PED_MUS" or report.reporte_Departamento == "PSICO" or report.reporte_Departamento == "TEO" or report.reporte_Departamento == "TNS_ENF" or report.reporte_Departamento == "TRAB_SOC" %}
+                                                {% for report in reports %}
+                                                    <a style="margin-left: 20%;" class="list-group" href="{{ report.reporte.url }}" target="_blank">
+                                                                - {{report.nombre}}</a>
+                                                {% empty %}
+                                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                            <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                            No se tienen registros de este año para mostrar
+                                                        </div>                    
+                                                {% endfor %}         
+                                            {% endif %}      
+                                        {% endif %
+                                        </div>
                                  </div>          
                         </div>
                     </div>
